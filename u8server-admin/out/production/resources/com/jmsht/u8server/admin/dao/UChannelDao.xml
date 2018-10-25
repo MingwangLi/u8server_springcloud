@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jmsht.u8server.admin.dao.UChannelDao">
+
+    <select id="getChanelsWithPage" parameterType="java.util.Map" resultType="com.jmsht.u8server.admin.vo.UChannelVO">
+        select
+        *
+        from
+        uchannel
+        <where>
+
+            <if test="appID != null">
+                and appID = #{appID}
+            </if>
+
+            <if test="channelID != null">
+                and channelID = #{channelID}
+            </if>
+
+            <if test="masterID != null">
+                and masterID = #{masterID}
+            </if>
+
+        </where>
+    </select>
+
+</mapper>
