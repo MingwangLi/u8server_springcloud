@@ -32,8 +32,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        //registry.addViewController("/").setViewName("forward:/static/view/login.html");
-        registry.addViewController("/").setViewName("/admin/toLogin");  // /请求拦截  /admin/toLogin不拦截
+        registry.addViewController("/").setViewName("forward:/static/view/login.html");
+        //registry.addViewController("/").setViewName("/admin/toLogin");  // /请求拦截  /admin/toLogin不拦截
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
         super.addViewControllers(registry);
     }

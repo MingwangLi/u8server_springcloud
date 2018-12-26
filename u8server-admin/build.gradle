@@ -35,6 +35,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-configuration-processor')
     //spring默认使用yml中的配置，但有时候要用传统的xml或properties配置
 
+    compile(group: 'org.apache.zookeeper', name: 'zookeeper', version:'3.4.6') {
+        exclude(module: 'slf4j-log4j12')
+    }
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon', version: '1.2.5.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version: '1.1.2.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.2.5.RELEASE'

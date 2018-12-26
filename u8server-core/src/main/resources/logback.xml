@@ -31,7 +31,7 @@
             <pattern>%d [%t] %5p \(%F:%L\) - %m%n</pattern>
         </encoder>
     </appender>
-    <logger name="com.jmsht.u8server.core" level="info"/>
+    <logger name="com.jmsht.u8server.core" level="debug"/>
     <root level="info">
         <appender-ref ref="FILEOUT"/>
     </root>
